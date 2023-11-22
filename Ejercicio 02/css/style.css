@@ -1,0 +1,51 @@
+*{
+    font-family:"Calibri", sans-serif;
+}
+
+h1,h2{
+    color: blue;
+}
+
+h3{
+    color: darkorange;
+}
+
+#presentacion p{
+    color: red;
+}
+
+#presentacion strong{
+    color: darkred;
+}
+
+#multimedial p{
+    color: green;
+}
+
+#multimedial strong{
+    color: darkgreen;
+}
+
+#web p{
+    color: darkred;
+}
+
+#web strong{
+    color:rgb(102, 2, 2);
+}
+
+#cortos p{
+    color:darkorchid;
+}
+
+#cortos strong{
+    color:purple;
+}
+
+#formacion p{
+    color: fuchsia;
+}
+
+#formacion strong{
+    color: rgb(168, 0, 168)
+}

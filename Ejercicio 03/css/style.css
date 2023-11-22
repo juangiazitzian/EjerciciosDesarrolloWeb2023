@@ -1,0 +1,54 @@
+#ej1{
+    background-color: fuchsia;
+    color: white;
+}
+
+#ej2{
+    text-align: center;
+    padding: 15px;
+}
+
+#ej3{
+    background-color: coral;
+    margin: 15px;
+}
+
+#ej4{
+    font-weight: bold;
+    border: solid 2px black;
+}
+
+#ej5{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#ej6{
+    line-height: 2rem;
+    padding: 10px;
+}
+
+#ej7{
+    background-image: url("../img/moon.jpg");
+    border: solid 5px red;
+}
+
+#ej8{
+    text-decoration: underline;
+    padding: 5px;
+}
+
+#ej9 a{
+    background-color: red;
+}
+
+#ej9{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#ej10 a{
+    border: dotted 3px red;
+    box-shadow: 0 8px 16px 0 black, 0 6px 20px 0 black;
+}
