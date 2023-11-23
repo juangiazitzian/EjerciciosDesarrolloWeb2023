@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Categoría en UADE</title>
+</head>
+<body>
+
+    <label for="nombreInput">Ingrese su nombre:</label>
+    <input type="text" id="nombreInput">
+    <br>
+    <label for="categoriaInput">¿Es usted docente o alumno en UADE?</label>
+    <input type="text" id="categoriaInput">
+    <br>
+    <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarMensaje() {
+            // Obtener el valor del nombre y categoría
+            var nombre = document.getElementById("nombreInput").value;
+            var categoria = document.getElementById("categoriaInput").value;
+
+            // Imprimir un párrafo con el mensaje
+            document.getElementById("resultado").innerHTML = "Hola, " + nombre + ", sos " + categoria + ".";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Números al Azar</title>
+</head>
+<body>
+
+    <button onclick="generarNumero()">Generar Número</button>
+
+    <script>
+        function generarNumero() {
+            var continuar = true;
+
+            while (continuar) {
+                // Preguntar al usuario si desea generar un número
+                continuar = confirm("¿Desea generar un número al azar entre 0 y 10 inclusive?");
+
+                if (continuar) {
+                    // Generar número al azar y mostrar en un alert
+                    var numero = Math.floor(Math.random() * 11); // Números entre 0 y 10
+                    alert("Número generado: " + numero);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

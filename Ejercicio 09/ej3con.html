@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con Tres Números</title>
+</head>
+<body>
+
+    <label for="num1Input">Ingrese el primer número:</label>
+    <input type="number" id="num1Input">
+    <br>
+    <label for="num2Input">Ingrese el segundo número:</label>
+    <input type="number" id="num2Input">
+    <br>
+    <label for="num3Input">Ingrese el tercer número:</label>
+    <input type="number" id="num3Input">
+    <br>
+    <button onclick="realizarOperacion()">Realizar Operación</button>
+    <p id="resultado"></p>
+
+    <script>
+        function realizarOperacion() {
+            // Obtener los valores de los números ingresados
+            var num1 = parseFloat(document.getElementById("num1Input").value);
+            var num2 = parseFloat(document.getElementById("num2Input").value);
+            var num3 = parseFloat(document.getElementById("num3Input").value);
+
+            // Verificar condiciones y realizar operaciones
+            var resultado, operacion;
+            if (num1 < num2 && num1 > num3) {
+                resultado = num1 * num2 * num3;
+                operacion = "multiplicación";
+            } else {
+                resultado = num1 + num2 + num3;
+                operacion = "sumatoria";
+            }
+
+            // Mostrar el resultado y la operación realizada
+            document.getElementById("resultado").innerHTML = "Resultado de la " + operacion + ": " + resultado;
+        }
+    </script>
+
+</body>
+</html>

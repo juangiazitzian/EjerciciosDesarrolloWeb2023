@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Dado</title>
+</head>
+<body>
+
+    <button onclick="simularDado()">Simular Dado</button>
+    <ul id="resultados"></ul>
+
+    <script>
+        function simularDado() {
+            var resultadosList = document.getElementById("resultados");
+            resultadosList.innerHTML = ""; // Limpiar resultados anteriores
+
+            var contador4 = 0;
+            var lanzamientos = 0;
+            var lanzamiento;
+
+            do {
+                // Simular lanzamiento de dado (números entre 1 y 6)
+                lanzamiento = Math.floor(Math.random() * 6) + 1;
+
+                // Mostrar el resultado en la lista
+                var resultadoItem = document.createElement("li");
+                resultadoItem.textContent = "Lanzamiento " + (lanzamientos + 1) + ": " + lanzamiento;
+                resultadosList.appendChild(resultadoItem);
+
+                // Contar la cantidad de veces que se obtuvo el número 4
+                if (lanzamiento === 4) {
+                    contador4++;
+                }
+
+                lanzamientos++;
+            } while (lanzamiento !== 6);
+
+            // Mostrar la cantidad de veces que se obtuvo el número 4
+            alert("Se obtuvo el número 6 después de " + lanzamientos + " lanzamientos.");
+            alert("Se obtuvo el número 4 " + contador4 + " veces.");
+        }
+    </script>
+
+</body>
+</html>

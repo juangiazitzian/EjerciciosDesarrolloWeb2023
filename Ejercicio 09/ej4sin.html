@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Sueldo</title>
+</head>
+<body>
+
+    <script>
+        // Solicitar al usuario el ingreso de valores
+        var valorHora = parseFloat(prompt("Ingrese el valor por hora:"));
+        var horasPorDia = parseFloat(prompt("Ingrese la cantidad de horas trabajadas por día:"));
+        var antiguedad = parseInt(prompt("Ingrese la antigüedad en años:"));
+
+        // Calcular sueldo bruto mensual
+        var sueldoBruto = valorHora * horasPorDia * 20; // Se asume un mes de 20 días laborables
+
+        // Calcular descuento por aportes (20%)
+        var descuento = sueldoBruto * 0.2;
+        var sueldoNeto = sueldoBruto - descuento;
+
+        // Calcular plus por antigüedad
+        var plusAntiguedad = 0;
+        if (antiguedad >= 5 && antiguedad <= 10) {
+            plusAntiguedad = 1000;
+        } else if (antiguedad > 10) {
+            plusAntiguedad = 1500;
+        }
+
+        // Sumar el plus al sueldo neto
+        sueldoNeto += plusAntiguedad;
+
+        // Mostrar resultados
+        document.write("<p>Sueldo Bruto Mensual: $" + sueldoBruto.toFixed(2) + "</p>");
+        document.write("<p>Sueldo Neto Mensual: $" + sueldoNeto.toFixed(2) + "</p>");
+    </script>
+
+</body>
+</html>

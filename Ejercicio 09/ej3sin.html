@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con Tres Números</title>
+</head>
+<body>
+
+    <script>
+        // Solicitar al usuario el ingreso de tres números
+        var num1 = parseFloat(prompt("Ingrese el primer número:"));
+        var num2 = parseFloat(prompt("Ingrese el segundo número:"));
+        var num3 = parseFloat(prompt("Ingrese el tercer número:"));
+
+        // Verificar condiciones y realizar operaciones
+        var resultado, operacion;
+        if (num1 < num2 && num1 > num3) {
+            resultado = num1 * num2 * num3;
+            operacion = "multiplicación";
+        } else {
+            resultado = num1 + num2 + num3;
+            operacion = "sumatoria";
+        }
+
+        // Mostrar el resultado y la operación realizada
+        document.write("<p>Resultado de la " + operacion + ": " + resultado + "</p>");
+    </script>
+
+</body>
+</html>

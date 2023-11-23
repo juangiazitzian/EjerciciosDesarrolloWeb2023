@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso y Mostrado de Números</title>
+</head>
+<body>
+
+    <button onclick="mostrarNumeros()">Mostrar Números</button>
+    <div id="numerosContainer"></div>
+
+    <script>
+        function mostrarNumeros() {
+            // Declarar un array para almacenar los números
+            var numeros = [];
+
+            // Solicitar al usuario el ingreso de 10 números
+            for (var i = 0; i < 10; i++) {
+                var numero = parseFloat(prompt("Ingrese el número " + (i + 1) + ":"));
+                numeros.push(numero);
+            }
+
+            // Mostrar los números en un único párrafo
+            var numerosContainer = document.getElementById("numerosContainer");
+            numerosContainer.innerHTML = "<h2>Los números ingresados son: " + numeros.join(", ") + "</h2>";
+        }
+    </script>
+
+</body>
+</html>

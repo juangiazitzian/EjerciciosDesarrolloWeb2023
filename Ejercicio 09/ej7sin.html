@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informar sobre Números Pares e Impares</title>
+</head>
+<body>
+
+    <script>
+        // Declarar variables para contar números pares e impares, y para la suma
+        var pares = 0;
+        var impares = 0;
+        var sumaPares = 0;
+        var sumaImpares = 0;
+
+        // Solicitar al usuario el ingreso de 10 números
+        for (var i = 0; i < 10; i++) {
+            var numero = parseFloat(prompt("Ingrese el número " + (i + 1) + ":"));
+
+            // Verificar si el número es par o impar
+            if (numero % 2 === 0) {
+                pares++;
+                sumaPares += numero;
+            } else {
+                impares++;
+                sumaImpares += numero;
+            }
+        }
+
+        // Determinar qué grupo sumó la mayor cantidad
+        var grupoMayor = (sumaPares > sumaImpares) ? "pares" : "impares";
+
+        // Mostrar los resultados
+        document.write("<p>Cantidad de números pares: " + pares + "</p>");
+        document.write("<p>Suma de números pares: " + sumaPares + "</p>");
+        document.write("<p>Cantidad de números impares: " + impares + "</p>");
+        document.write("<p>Suma de números impares: " + sumaImpares + "</p>");
+        document.write("<p>El grupo con la mayor suma es: " + grupoMayor + "</p>");
+    </script>
+
+</body>
+</html>
